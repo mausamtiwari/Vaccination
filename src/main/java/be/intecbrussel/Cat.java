@@ -5,6 +5,10 @@ import java.util.Map;
 public class Cat extends Animal {
     private boolean hasLongNails;
 
+    public Cat(){
+
+    }
+
     public Cat(Map<Disease, Boolean> isVaccinated, boolean isClean, int age, String name, int animalNumber, boolean hasLongNails) {
         super(isVaccinated, isClean, age, name, animalNumber);
         this.hasLongNails = hasLongNails;
@@ -13,7 +17,6 @@ public class Cat extends Animal {
     @Override
     public void treatAnimal() {
         super.treatAnimal();
-        hasLongNails = false;
     }
 
 

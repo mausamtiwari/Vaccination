@@ -5,7 +5,9 @@ import java.util.Map;
 public class Monkey extends Animal{
     private boolean isHyperActive;
 
+    public Monkey(){
 
+    }
     public Monkey(Map<Disease, Boolean> isVaccinated, boolean isClean, int age, String name, int animalNumber, boolean isHyperActive) {
         super(isVaccinated, isClean, age, name, animalNumber);
         this.isHyperActive = isHyperActive;
@@ -13,7 +15,6 @@ public class Monkey extends Animal{
 
     public void treatAnimal() {
         super.treatAnimal();
-        this.setHyperActive(false);
     }
 
 

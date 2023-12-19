@@ -1,8 +1,7 @@
 package be.intecbrussel;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.stream.DoubleStream;
 
 public class Animal implements Vaccinateable, Treatable {
 
@@ -15,10 +14,13 @@ public class Animal implements Vaccinateable, Treatable {
 
     @Override
     public void treatAnimal() {
-        isClean = true;
-        if (isVaccinated != null) {
-            isVaccinated.replaceAll((disease, isVaccinated) -> false);
-        }
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Monkey monkey = new Monkey();
+        monkey.setHyperActive(false);
+        cat.setHasLongNails(false);
+        dog.setHasFoulBreath(false);
+        this.isClean = true;
     }
 
     @Override
@@ -27,7 +29,7 @@ public class Animal implements Vaccinateable, Treatable {
     }
 
     public Animal() {
-        this.isVaccinated = new HashMap<>();
+        this.isVaccinated = new LinkedHashMap<>();
     }
 
     public Animal(Map<Disease, Boolean> isVaccinated, Boolean isClean, int age, String name, int animalNumber) {

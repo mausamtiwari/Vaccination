@@ -3,14 +3,11 @@ package be.intecbrussel;
 import java.util.*;
 
 
-
 public class AnimalShelter {
-    private List<Animal> animals;
-    private int animalId;
+    private List<Animal> animals = new ArrayList<>();
+    private int animalId = 1;
 
     public AnimalShelter() {
-        this.animals = new ArrayList<>();
-        this.animalId = 1;
     }
 
     public void printAnimals() {
@@ -61,7 +58,9 @@ public class AnimalShelter {
             animal.treatAnimal();
         } else {
             throw new AnimalNotFoundException("Animal not found with number: " + animalNumber);
+
         }
+        optionalAnimal.ifPresent(System.out::println);
     }
 
     public void treatAnimal(String name) throws AnimalNotFoundException {
@@ -72,10 +71,14 @@ public class AnimalShelter {
         } else {
             throw new AnimalNotFoundException("Animal not found with name: " + name);
         }
+        optionalAnimal.ifPresent(System.out::println);
     }
 
     public void treatAllAnimals() {
-        animals.forEach(Animal::treatAnimal);
+        animals.forEach(animal -> {
+            animal.treatAnimal();
+            System.out.println(animal);
+        });
     }
 
     public Optional<Animal> findOldestAnimal() {
