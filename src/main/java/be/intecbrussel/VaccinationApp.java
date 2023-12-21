@@ -1,15 +1,16 @@
 package be.intecbrussel;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 public class VaccinationApp {
     public static void main(String[] args) throws AnimalShelter.AnimalNotFoundException {
+        // AnimalShelter initialised.
         AnimalShelter animalShelter = new AnimalShelter();
 
         // Dog 1
-        Map<Disease, Boolean> dog1Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> dog1Vaccinations = new HashMap<>();
         dog1Vaccinations.put(Disease.FLUE, true);
         dog1Vaccinations.put(Disease.CHICKENPOCKS, false);
         dog1Vaccinations.put(Disease.POLIO, true);
@@ -17,7 +18,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Dog(dog1Vaccinations, false, 3, "Grot", 1, false));
 
         // Dog 2
-        Map<Disease, Boolean> dog2Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> dog2Vaccinations = new HashMap<>();
         dog2Vaccinations.put(Disease.FLUE, true);
         dog2Vaccinations.put(Disease.CHICKENPOCKS, true);
         dog2Vaccinations.put(Disease.POLIO, false);
@@ -25,7 +26,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Dog(dog2Vaccinations, true, 2, "Max", 2, true));
 
         // Dog 3
-        Map<Disease, Boolean> dog3Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> dog3Vaccinations = new HashMap<>();
         dog3Vaccinations.put(Disease.FLUE, false);
         dog3Vaccinations.put(Disease.CHICKENPOCKS, true);
         dog3Vaccinations.put(Disease.POLIO, false);
@@ -33,7 +34,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Dog(dog3Vaccinations, true, 5, "Charlie", 3, false));
 
         // Cat 1
-        Map<Disease, Boolean> cat1Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> cat1Vaccinations = new HashMap<>();
         cat1Vaccinations.put(Disease.FLUE, true);
         cat1Vaccinations.put(Disease.CHICKENPOCKS, false);
         cat1Vaccinations.put(Disease.POLIO, false);
@@ -41,7 +42,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Cat(cat1Vaccinations, true, 1, "Tiger", 4, true));
 
         // Cat 2
-        Map<Disease, Boolean> cat2Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> cat2Vaccinations = new HashMap<>();
         cat2Vaccinations.put(Disease.FLUE, false);
         cat2Vaccinations.put(Disease.CHICKENPOCKS, true);
         cat2Vaccinations.put(Disease.POLIO, false);
@@ -49,7 +50,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Cat(cat2Vaccinations, false, 2, "Tom", 5, false));
 
         // Cat 3
-        Map<Disease, Boolean> cat3Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> cat3Vaccinations = new HashMap<>();
         cat3Vaccinations.put(Disease.FLUE, true);
         cat3Vaccinations.put(Disease.CHICKENPOCKS, true);
         cat3Vaccinations.put(Disease.POLIO, true);
@@ -57,7 +58,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Cat(cat3Vaccinations, true, 3, "Whiskers", 6, true));
 
         // Monkey 1
-        Map<Disease, Boolean> monkey1Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> monkey1Vaccinations = new HashMap<>();
         monkey1Vaccinations.put(Disease.FLUE, false);
         monkey1Vaccinations.put(Disease.CHICKENPOCKS, false);
         monkey1Vaccinations.put(Disease.POLIO, false);
@@ -65,7 +66,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Monkey(monkey1Vaccinations, true, 4, "Banana", 7, false));
 
         // Monkey 2
-        Map<Disease, Boolean> monkey2Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> monkey2Vaccinations = new HashMap<>();
         monkey2Vaccinations.put(Disease.FLUE, true);
         monkey2Vaccinations.put(Disease.CHICKENPOCKS, true);
         monkey2Vaccinations.put(Disease.POLIO, false);
@@ -73,7 +74,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Monkey(monkey2Vaccinations, false, 2, "Bongo", 8, true));
 
         // Monkey 3
-        Map<Disease, Boolean> monkey3Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> monkey3Vaccinations = new HashMap<>();
         monkey3Vaccinations.put(Disease.FLUE, true);
         monkey3Vaccinations.put(Disease.CHICKENPOCKS, false);
         monkey3Vaccinations.put(Disease.POLIO, true);
@@ -81,7 +82,7 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Monkey(monkey3Vaccinations, false, 5, "Cheeky", 9, true));
 
         // Monkey 4
-        Map<Disease, Boolean> monkey4Vaccinations = new LinkedHashMap<>();
+        Map<Disease, Boolean> monkey4Vaccinations = new HashMap<>();
         monkey4Vaccinations.put(Disease.FLUE, false);
         monkey4Vaccinations.put(Disease.CHICKENPOCKS, true);
         monkey4Vaccinations.put(Disease.POLIO, false);
@@ -89,19 +90,19 @@ public class VaccinationApp {
         animalShelter.addAnimal(new Monkey(monkey4Vaccinations, false, 5, "Chimp", 10, true));
 
 
-        System.out.println("All the animals are: ");
+        System.out.println("************************* The list of animals **************************");
         animalShelter.printAnimals();
         System.out.println();
 
-        System.out.println("Sorted animals are: ");
+        System.out.println("************* Sorted animals according to the animalNumber *************");
         animalShelter.sortAnimals();
         System.out.println();
 
-        System.out.println("Animals sorted by name: ");
+        System.out.println("************************* Animals sorted by name ***********************");
         animalShelter.sortAnimalsByName();
         System.out.println();
 
-        System.out.println("Animals sorted by age: ");
+        System.out.println("************************* Animals sorted by age ************************");
         animalShelter.sortAnimalsByAge();
         System.out.println();
 
@@ -109,29 +110,29 @@ public class VaccinationApp {
         animalShelter.printAnimalsNotVaccinated(Disease.POLIO);
         System.out.println();
 
-        System.out.println("Animal found by number");
+        System.out.println("************************* Search animal by number **********************");
         Optional<Animal> foundAnimalByNumber = animalShelter.findAnimal(2);
         foundAnimalByNumber.ifPresent(System.out::println);
         System.out.println();
 
-        System.out.println("Animal found by name");
-        Optional<Animal> foundAnimalByNAme = animalShelter.findAnimal("Chimp");
-        foundAnimalByNAme.ifPresent(System.out::println);
+        System.out.println("************************* Search animal by name ************************");
+        Optional<Animal> foundAnimalByName = animalShelter.findAnimal("Tom");
+        foundAnimalByName.ifPresent(System.out::println);
         System.out.println();
 
-        System.out.println("Treat animal by number");
+        System.out.println("************************* Treat animal by number ***********************");
         animalShelter.treatAnimal(10);
         System.out.println();
 
-        System.out.println("Treat animal by name");
+        System.out.println("************************* Treat animal by name *************************");
         animalShelter.treatAnimal("Max");
         System.out.println();
 
-        System.out.println("Treat all animals");
+        System.out.println("************************** Treat all animals ***************************");
         animalShelter.treatAllAnimals();
         System.out.println();
 
-        System.out.println("Oldest animal");
+        System.out.println("**************************** Oldest animal *****************************");
         Optional<Animal> oldestAnimal = animalShelter.findOldestAnimal();
         oldestAnimal.ifPresent(System.out::println);
         System.out.println();
@@ -140,3 +141,4 @@ public class VaccinationApp {
         System.out.println("Total number of animals: " + animalCount);
     }
 }
+

@@ -1,6 +1,5 @@
 package be.intecbrussel;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Animal implements Vaccinateable, Treatable {
@@ -12,26 +11,24 @@ public class Animal implements Vaccinateable, Treatable {
     private int animalNumber;
 
 
+    // Treats animal. Sets isClean to true.
     @Override
     public void treatAnimal() {
-        Dog dog = new Dog();
-        Cat cat = new Cat();
-        Monkey monkey = new Monkey();
-        monkey.setHyperActive(false);
-        cat.setHasLongNails(false);
-        dog.setHasFoulBreath(false);
         this.isClean = true;
     }
 
+    // Vaccinates animal. Sets Vaccination for a specified disease to true.
     @Override
     public void vaccinateAnimal(Disease disease) {
         isVaccinated.put(disease, true);
     }
 
+    // No args constructor.
     public Animal() {
-        this.isVaccinated = new LinkedHashMap<>();
+
     }
 
+    // All args constructor.
     public Animal(Map<Disease, Boolean> isVaccinated, Boolean isClean, int age, String name, int animalNumber) {
         this.isVaccinated = isVaccinated;
         this.isClean = isClean;
@@ -40,6 +37,7 @@ public class Animal implements Vaccinateable, Treatable {
         this.animalNumber = animalNumber;
     }
 
+    // getters and setters
     public Map<Disease, Boolean> getIsVaccinated() {
         return isVaccinated;
     }
@@ -83,12 +81,12 @@ public class Animal implements Vaccinateable, Treatable {
     @Override
     public String toString() {
         return "Animal{" +
-                "isVaccinated=" + getIsVaccinated() +
-                ", isClean=" + getIsClean() +
-                ", age=" + getAge() +
-                ", name='" + getName() + '\'' +
-                ", animalNumber=" + getAnimalNumber();
+                "isVaccinated=" + isVaccinated +
+                ", isClean=" + isClean +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                ", animalNumber=" + animalNumber +
+                '}';
     }
-
 
 }
