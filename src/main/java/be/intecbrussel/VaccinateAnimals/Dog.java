@@ -1,4 +1,4 @@
-package be.intecbrussel.VaccinateAnimals.service;
+package be.intecbrussel.VaccinateAnimals;
 
 public class Dog extends Animal {
     private boolean hasFoulBreath;

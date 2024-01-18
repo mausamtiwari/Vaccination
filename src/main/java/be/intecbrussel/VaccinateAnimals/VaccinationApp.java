@@ -1,7 +1,5 @@
 package be.intecbrussel.VaccinateAnimals;
 
-import be.intecbrussel.VaccinateAnimals.service.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,17 +9,6 @@ public class VaccinationApp {
         // AnimalShelter initialised.
         AnimalShelter animalShelter = new AnimalShelter();
         List<Animal> animals = new ArrayList<>();
-
-        /*animalShelter.addAnimal(new Dog(false, 7, "Mat", 1, true));
-        animalShelter.addAnimal(new Dog(false, 2, "Max", 2, true));
-        animalShelter.addAnimal(new Dog(false, 5, "Charlie", 3, false));
-        animalShelter.addAnimal(new Cat(false, 1, "Tiger", 4, true));
-        animalShelter.addAnimal(new Cat(false, 2, "Tom", 5, false));
-        animalShelter.addAnimal(new Cat(false, 3, "Whiskers", 6, true));
-        animalShelter.addAnimal(new Monkey(false, 4, "Banana", 7, false));
-        animalShelter.addAnimal(new Monkey(false, 2, "Bongo", 8, true));
-        animalShelter.addAnimal(new Monkey(false, 5, "Cheeky", 9, true));
-        animalShelter.addAnimal(new Monkey(false, 5, "Chimp", 10, true));*/
 
         Animal dog1 = new Dog(false, 7, "Mat", 1, true);
         Animal dog2 = new Dog(false, 2, "Max", 2, true);

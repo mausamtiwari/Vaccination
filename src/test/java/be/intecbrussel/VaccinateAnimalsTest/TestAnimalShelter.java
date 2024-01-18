@@ -1,6 +1,6 @@
 package be.intecbrussel.VaccinateAnimalsTest;
 
-import be.intecbrussel.VaccinateAnimals.service.*;
+import be.intecbrussel.VaccinateAnimals.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;

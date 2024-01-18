@@ -1,4 +1,4 @@
-package be.intecbrussel.VaccinateAnimals.service;
+package be.intecbrussel.VaccinateAnimals;
 
 import java.util.HashMap;
 import java.util.Map;
