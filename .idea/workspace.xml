@@ -5,17 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7da1cbb6-b249-4ee3-9dff-38dc88047de5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/AnimalShelter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/AnimalShelter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Monkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Monkey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinationApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/exception/AnimalNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/be/intecbrussel/VaccinateAnimalsTest/TestAnimalShelter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/AnimalShelter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/AnimalShelter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Disease.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Monkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Monkey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Treatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Treatable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/Vaccinateable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/service/Vaccinateable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinationApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/intecbrussel/VaccinateAnimals/VaccinationApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,6 +51,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -49,6 +61,125 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AnimalShelterTest.testPrintAnimalsVaccinated">
+    <configuration name="AnimalShelterTest.testAddAnimal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Vaccination" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecbrussel.VaccinateAnimalsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecbrussel.VaccinateAnimalsTest" />
+      <option name="MAIN_CLASS_NAME" value="be.intecbrussel.VaccinateAnimalsTest.AnimalShelterTest" />
+      <option name="METHOD_NAME" value="testAddAnimal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalShelterTest.testAnimalShelterSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Vaccination" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecbrussel.VaccinateAnimalsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecbrussel.VaccinateAnimalsTest" />
+      <option name="MAIN_CLASS_NAME" value="be.intecbrussel.VaccinateAnimalsTest.AnimalShelterTest" />
+      <option name="METHOD_NAME" value="testAnimalShelterSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalShelterTest.testPrintAnimalsVaccinated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Vaccination" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecbrussel.VaccinateAnimalsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecbrussel.VaccinateAnimalsTest" />
+      <option name="MAIN_CLASS_NAME" value="be.intecbrussel.VaccinateAnimalsTest.AnimalShelterTest" />
+      <option name="METHOD_NAME" value="testPrintAnimalsVaccinated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAnimalShelter.testAddAnimal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Vaccination" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecbrussel.VaccinateAnimalsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecbrussel.VaccinateAnimalsTest" />
+      <option name="MAIN_CLASS_NAME" value="be.intecbrussel.VaccinateAnimalsTest.TestAnimalShelter" />
+      <option name="METHOD_NAME" value="testAddAnimal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAnimalShelter.testAnimalShelterSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Vaccination" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.intecbrussel.VaccinateAnimalsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.intecbrussel.VaccinateAnimalsTest" />
+      <option name="MAIN_CLASS_NAME" value="be.intecbrussel.VaccinateAnimalsTest.TestAnimalShelter" />
+      <option name="METHOD_NAME" value="testAnimalShelterSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vaccination" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AnimalShelterTest.testPrintAnimalsVaccinated" />
+        <item itemvalue="JUnit.AnimalShelterTest.testAddAnimal" />
+        <item itemvalue="JUnit.AnimalShelterTest.testAnimalShelterSize" />
+        <item itemvalue="JUnit.TestAnimalShelter.testAddAnimal" />
+        <item itemvalue="JUnit.TestAnimalShelter.testAnimalShelterSize" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

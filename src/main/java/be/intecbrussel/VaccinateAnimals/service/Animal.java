@@ -1,41 +1,35 @@
-package be.intecbrussel;
+package be.intecbrussel.VaccinateAnimals.service;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Stream;
 
-public class Animal implements Vaccinateable, Treatable {
+public abstract class Animal implements Vaccinateable, Treatable {
 
-    private Map<Disease, Boolean> isVaccinated;
+    private Map<Disease, Boolean> isVaccinated = new HashMap<>();
     private Boolean isClean;
     private int age;
     private String name;
     private int animalNumber;
 
 
-    // Treats animal. Sets isClean to true.
-    @Override
-    public void treatAnimal() {
-        this.isClean = true;
-    }
-
-    // Vaccinates animal. Sets Vaccination for a specified disease to true.
-    @Override
-    public void vaccinateAnimal(Disease disease) {
-        isVaccinated.put(disease, true);
-    }
 
     // No args constructor.
     public Animal() {
-
+        this(false, 0, "DEFAULT_ANIMAL_NAME", -1);
     }
 
     // All args constructor.
-    public Animal(Map<Disease, Boolean> isVaccinated, Boolean isClean, int age, String name, int animalNumber) {
-        this.isVaccinated = isVaccinated;
+    public Animal( Boolean isClean, int age, String name, int animalNumber) {
         this.isClean = isClean;
         this.age = age;
         this.name = name;
         this.animalNumber = animalNumber;
+        Stream.of(Disease.values()).forEach((key-> isVaccinated.put(key,false)));
     }
+
+
+
 
     // getters and setters
     public Map<Disease, Boolean> getIsVaccinated() {
@@ -78,15 +72,27 @@ public class Animal implements Vaccinateable, Treatable {
         this.animalNumber = animalNumber;
     }
 
+
+    // Treats animal. Sets isClean to true.
+    @Override
+    public void treatAnimal() {
+        this.isClean = true;
+    }
+
+    // Vaccinates animal. Sets Vaccination for a specified disease to true.
+    @Override
+    public void vaccinateAnimal(Disease disease) {
+        isVaccinated.replace(disease, true);
+        this.isClean = true;
+    }
+
+
     @Override
     public String toString() {
-        return "Animal{" +
-                "isVaccinated=" + isVaccinated +
-                ", isClean=" + isClean +
+        return "isClean=" + isClean +
                 ", age=" + age +
                 ", name='" + name + '\'' +
-                ", animalNumber=" + animalNumber +
-                '}';
+                ", animalNumber=" + animalNumber ;
     }
 
 }

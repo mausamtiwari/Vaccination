@@ -1,4 +1,4 @@
-package be.intecbrussel;
+package be.intecbrussel.VaccinateAnimals.service;
 
 public enum Disease {
     CHICKENPOCKS,
