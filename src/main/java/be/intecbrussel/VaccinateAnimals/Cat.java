@@ -31,4 +31,5 @@ public class Cat extends Animal {
         super.treatAnimal();
         this.setHasLongNails(false);
     }
+
 }

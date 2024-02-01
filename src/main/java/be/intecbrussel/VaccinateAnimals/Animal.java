@@ -16,7 +16,6 @@ public abstract class Animal implements Vaccinateable, Treatable {
 
     // No args constructor.
     public Animal() {
-        this(false, 0, "DEFAULT_ANIMAL_NAME", -1);
     }
 
     // All args constructor.

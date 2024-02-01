@@ -1,0 +1,37 @@
+@startuml
+class Animal{
+String name
+int age
+int id
+}
+
+enum Disease{
+CHICKENPOCKS
+FLUE
+POLIO
+HEPATITISA
+
+}
+
+class AnimalShelter{
+- animals : List<Animal>
+- id : int
+-name : String
+__
++ addAnimal() :  void
++ findAnimal(name: String) : Animal
++ findAnimal(id : int): Animal
++ findAnimalsByName(name: String): Animal
++ sortAnimals(name: String) : void
++ sortAnimals( age : int) : void
++ getAnimalsSortedByName(name : String) : Animal
++ returnAllAnimals() : Animal
++ treatAnimals(name: String) : void
++ findAnimalsByName(name : String) : Animal
+
+
+}
+
+
+
+@enduml

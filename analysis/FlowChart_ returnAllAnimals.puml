@@ -1,0 +1,20 @@
+@startuml
+start
+    :user provides method to return animals;
+if(animal shelter empty) then (no)
+
+else(yes)
+    :user provides an animal;
+if(does the animal exists) then (yes)
+    :error message(Animal already exists);
+    stop
+else(no)
+    :get animal id;
+    :add animal to the shelter;
+endif
+endif
+    :system retrieves the list of animals;
+    :the list of animals  is then printed;
+stop
+
+@enduml

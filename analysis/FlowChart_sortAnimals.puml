@@ -1,0 +1,15 @@
+@startuml
+start
+
+:user provides sorting method by name or age;
+
+if(sorting by name) then (yes)
+:system retrieves the list of animals;
+:system sorts the animals by name;
+stop
+else (no, sort by age)
+ :system retrieves the animals;
+ :system sorts the animals bye age;
+ stop
+
+@enduml

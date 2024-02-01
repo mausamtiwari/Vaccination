@@ -18,7 +18,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testAnimalShelterSize() {
+    void animalShelterSizeTest() {
         assertEquals(0, animalShelter.animalShelterSize());
 
         Animal dog1 = new Dog(false, 7, "Mat", 1, true);
@@ -32,7 +32,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testAddAnimal() {
+    void addAnimalTest() {
 
         Animal dog1 = new Dog(false, 7, "Mat", 1, true);
         Animal dog2 = new Dog(false, 2, "Max", 2, true);
@@ -49,7 +49,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testSortAnimals() {
+    void sortAnimalsTest() {
         Animal dog1 = new Dog(false, 5, "Charlie", 1, true);
         Animal dog2 = new Dog(false, 3, "Buddy", 2, false);
         Animal cat = new Cat(false, 2, "Whiskers", 3, true);
@@ -66,7 +66,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testSortAnimalsByName() {
+    void sortAnimalsByNameTest() {
         Animal dog1 = new Dog(false, 5, "Charlie", 1, true);
         Animal cat1 = new Cat(false, 3, "Buddy", 2, false);
         Animal cat2 = new Cat(false, 2, "Whiskers", 3, true);
@@ -83,7 +83,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testSortAnimalsByAge() {
+    void SrtAnimalsByAgeTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
         Animal cat1 = new Cat(false, 3, "Buddy", 2, false);
         Animal cat2 = new Cat(false, 2, "Whiskers", 3, true);
@@ -100,12 +100,13 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testPrintAnimalsNotVaccinated() {
+    void printAnimalsNotVaccinatedTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
         Animal cat = new Cat(false, 3, "Buddy", 2, false);
 
         animalShelter.addAnimal(dog);
         animalShelter.addAnimal(cat);
+
 
         ByteArrayOutputStream outPut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outPut));
@@ -120,16 +121,14 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testPrintAnimalsVaccinated() {
+    void printAnimalsVaccinatedTest() {
 
         // TODO result not obtained. animalShelter.printAnimalsVaccinated(Disease.FLUE) is null.
         Animal dog = new Dog(false, 1, "Charlie", 1, true);
         Animal cat = new Cat(false, 3, "Whiskers", 6, true);
 
-
         animalShelter.addAnimal(dog);
         animalShelter.addAnimal(cat);
-
 
         ByteArrayOutputStream outPut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outPut));
@@ -137,15 +136,14 @@ class AnimalShelterTest {
         animalShelter.printAnimalsVaccinated(Disease.FLUE);
 
         String expectedOutput = "***************** Animals vaccinated for FLUE ********************\n" +
-                "isClean=true, age=1, name='Tiger', animalNumber=4\n" +
+                "isClean=true, age=1, name='Charlie', animalNumber=1\n" +
                 "isClean=true, age=3, name='Whiskers', animalNumber=6\n";
-
 
         assertEquals(expectedOutput.trim(), outPut.toString().trim());
     }
 
     @Test
-    void testFindAnimalByNumber() {
+    void findAnimalByNumberTest() {
         Animal monkey1 = new Monkey(false, 4, "Banana", 1, true);
         Animal monkey2 = new Monkey(false, 2, "Bongo", 2, true);
         Animal monkey3 = new Monkey(false, 5, "Cheeky", 3, true);
@@ -170,8 +168,29 @@ class AnimalShelterTest {
         assertEquals(monkey1, foundAnimal1.get());
     }
 
+
     @Test
-    void testFindAnimalByName() {
+    void findAnimalByNameTest() {
+        Animal monkey1 = new Monkey(false, 4, "Banana", 1, true);
+        Animal monkey2 = new Monkey(false, 2, "Bongo", 2, true);
+        Animal monkey3 = new Monkey(false, 5, "Cheeky", 3, true);
+        Animal monkey4 = new Monkey(false, 5, "Chimp", 4, true);
+
+        animalShelter.addAnimal(monkey1);
+        animalShelter.addAnimal(monkey2);
+        animalShelter.addAnimal(monkey3);
+        animalShelter.addAnimal(monkey4);
+
+        Optional<Animal> foundAnimal = animalShelter.findAnimal(3);
+
+        assertTrue(foundAnimal.isPresent());
+        assertEquals("Cheeky", foundAnimal.get().getName());
+    }
+
+
+
+    @Test
+    void FindAnimalByNameTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
         Animal cat = new Cat(false, 3, "Buddy", 2, false);
 
@@ -185,7 +204,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testTreatAnimalByNumber() {
+    void treatAnimalByNumberTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
 
         animalShelter.addAnimal(dog);
@@ -204,10 +223,12 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testTreatAnimalByName() {
+    void treatAnimalByNameTest() {
         Animal dog = new Dog(false, 5, "Max", 1, true);
+        Animal cat = new Cat(false, 3, "Max", 2, false);
 
         animalShelter.addAnimal(dog);
+        animalShelter.addAnimal(cat);
 
         ByteArrayOutputStream outPut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outPut));
@@ -223,7 +244,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testTreatAllAnimals() {
+    void treatAllAnimalsTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
         Animal cat = new Cat(false, 3, "Buddy", 2, false);
 
@@ -241,7 +262,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testFindOldestAnimal() {
+    void findOldestAnimaTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
         Animal cat = new Cat(false, 3, "Buddy", 2, false);
 
@@ -252,7 +273,7 @@ class AnimalShelterTest {
     }
 
     @Test
-    void testCountAnimals() {
+    void countAnimalsTest() {
         Animal dog = new Dog(false, 5, "Charlie", 1, true);
         Animal cat = new Cat(false, 3, "Buddy", 2, false);
 

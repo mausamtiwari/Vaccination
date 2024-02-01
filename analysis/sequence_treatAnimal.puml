@@ -1,0 +1,12 @@
+@startuml
+User -> AnimalShelterApp: request to treat animal.
+AnimalShelterApp -> AnimalService : treatAnimal
+AnimalService -> AnimalService : treatAnimalsB(List<Animals>)
+AnimalService -> AnimalService : cleanAnimal(animal)
+AnimalService -> AnimalService : vaccinateAnimal(animal)
+AnimalRepository --> AnimalService : void
+AnimalService --> AnimalShelterApp : void
+AnimalShelterApp --> User : Ok
+
+@enduml
+

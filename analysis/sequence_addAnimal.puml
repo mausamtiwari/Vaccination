@@ -1,0 +1,19 @@
+@startuml
+
+User -> AnimalShelterApp: provides an animal
+AnimalShelterApp -> AnimalService: addAnimal
+AnimalService -> AnimalRepository : getAnimal()
+AnimalRepository --> AnimalService : List<Animal>
+
+alt animal exists
+    AnimalRepository --> AnimalService : Error(Animal exists)
+    AnimalService --> AnimalShelterApp: Error(Animal exists)
+    AnimalShelterApp -> User: displayError(Animal exists)
+
+else does not exist
+    AnimalService -> AnimalRepository: addAnimalToShelter(animal)
+    AnimalRepository --> AnimalService: success
+    AnimalService --> AnimalShelterApp: void
+    AnimalShelterApp --> User: OK
+end
+@enduml

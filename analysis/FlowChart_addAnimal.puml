@@ -1,0 +1,12 @@
+@startuml
+start
+:user provides an animal;
+if(does the animal exists) then (yes)
+:error message(Animal already exists);
+stop
+else(no)
+:get animal id;
+:add animal to the shelter;
+stop
+
+@enduml

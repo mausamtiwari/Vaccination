@@ -1,0 +1,19 @@
+@startuml
+
+User -> AnimalShelterApp : enters name
+AnimalShelterApp -> AnimalService : getAllAnimalsSortedByName(animals)
+AnimalService -> AnimalRepository : getAnimals()
+AnimalService <-- AnimalRepository : List<Animal>
+
+
+AnimalService -> AnimalService : sortAnimalsBYName(List<Animals>)
+AnimalService --> AnimalShelterApp : returns the list\n of sorted animals
+AnimalShelterApp --> User : returns the list\n of sorted animals
+
+
+
+@enduml
+
+
+
+

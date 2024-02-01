@@ -1,6 +1,11 @@
 package be.intecbrussel.VaccinateAnimals;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
+import static java.lang.Boolean.FALSE;
 
 
 public class AnimalShelter {
@@ -13,11 +18,9 @@ public class AnimalShelter {
 
     }
 
-    public int animalShelterSize(){
+    public int animalShelterSize() {
         return animals.size();
     }
-
-
 
 
     // Prints the elements of Animal list.
@@ -52,18 +55,18 @@ public class AnimalShelter {
 
     // Prints the list of animals which are not vaccinated for a specified disease.
     public void printAnimalsNotVaccinated(Disease disease) {
-        System.out.println("***************** Animals not vaccinated for " + disease + " ********************");
+
         animals.stream()
-                .filter(animal -> Boolean.FALSE.equals(animal.getIsVaccinated().get(disease)))
+                .filter(animal -> FALSE.equals(animal.getIsVaccinated().get(disease)))
                 .forEach(System.out::println);
     }
 
 
     // Prints the list of animals which are vaccinated for a specified disease.
     public void printAnimalsVaccinated(Disease disease) {
-        System.out.println("***************** Animals vaccinated for " + disease + " ********************");
+
         animals.stream()
-                .filter(animal -> Boolean.TRUE.equals(animal.getIsVaccinated().get(disease)))
+                .filter(animal -> !FALSE.equals(animal.getIsVaccinated().get(disease)))
                 .forEach(System.out::println);
     }
 
@@ -76,7 +79,7 @@ public class AnimalShelter {
                 .findFirst();
 
         foundByAnimalNumber.ifPresent(animal ->
-                System.out.println("Animal found: "+ animal)
+                System.out.println("Animal found: " + animal)
         );
 
         if (foundByAnimalNumber.isEmpty()) {
@@ -110,7 +113,7 @@ public class AnimalShelter {
                 .findFirst();
 
         foundByAnimalName.ifPresent(animal ->
-                System.out.println("Animal found: " + animal )
+                System.out.println("Animal found: " + animal)
         );
 
         if (foundByAnimalName.isEmpty()) {
@@ -168,9 +171,6 @@ public class AnimalShelter {
 
     @Override
     public String toString() {
-        return "AnimalShelter{" +
-                "animals=" + animals +
-                ", animalId=" + animalId +
-                '}';
+        return animals.toString();
     }
 }

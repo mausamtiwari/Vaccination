@@ -1,0 +1,17 @@
+@startuml
+
+User -> AnimalShelterApp : inputs name
+AnimalShelterApp -> AnimalService : findAnimalsByName
+AnimalService -> AnimalRepository : getAnimals()
+AnimalRepository --> AnimalService : List<Animals>
+
+    alt animal found
+            AnimalService --> AnimalShelterApp : returns animals found
+            AnimalShelterApp --> User : returns animals found
+
+    else no animals
+        AnimalService --> AnimalShelterApp : error(no animal)
+        AnimalShelterApp --> User : error(no animal)
+    end
+
+@enduml

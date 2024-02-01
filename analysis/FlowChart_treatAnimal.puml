@@ -1,0 +1,10 @@
+@startuml
+
+start
+:user provides the animal to treat;
+:clean animal;
+:vaccinate animal;
+stop
+
+
+@enduml

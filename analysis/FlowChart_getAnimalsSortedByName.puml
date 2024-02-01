@@ -1,0 +1,11 @@
+@startuml
+start
+:user provides sorting method by name;
+:system retrieves the list of animals;
+:system sorts the animals by name;
+:system returns the animals sorted by name;
+stop;
+
+
+
+@enduml

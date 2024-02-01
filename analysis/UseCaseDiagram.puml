@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+ :user:
+
+package use-cases{
+
+(add animals to shelter) as (add animals to shelter)
+(treat animals) as (treat animals)
+(sort animals ) as (sort animals )
+(return animals) as getAll
+( find an animal) as get
+(find all animals by name) as getname
+(get all animals sorted by name) as getsortname
+
+}
+
+user --> (add animals to shelter)
+user --> (treat animals)
+user --> (sort animals )
+user --> getAll
+user --> get
+user --> getname
+user --> getsortname
+
+@enduml

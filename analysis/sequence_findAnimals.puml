@@ -1,0 +1,41 @@
+@startuml
+
+User -> AnimalShelterApp : inputs name or\n animal number
+AnimalShelterApp -> AnimalService : findAnimalShelter(findType: findType)
+AnimalService -> AnimalRepository : getAnimals()
+AnimalRepository --> AnimalService : List<Animals>
+
+
+alt uses name
+AnimalService -> AnimalService : findAnimalsByName(List<Animals>)
+    alt animal found
+        alt more than one animal
+            AnimalService --> AnimalShelterApp : error(more animals)
+            AnimalShelterApp --> User : error(more animals)
+        else there is one animal
+            AnimalService --> AnimalShelterApp : returns the found animal
+            AnimalShelterApp --> User : returns the found animal
+          end
+
+    else no animals
+        AnimalService --> AnimalShelterApp : error(no animal)
+        AnimalShelterApp --> User : error(no animal)
+    end
+
+else uses number
+AnimalService -> AnimalService : findAnimalsByNumber(List<Animals>)
+    alt animal found
+        alt more than one animal
+            AnimalService --> AnimalShelterApp : error(more animals)
+            AnimalShelterApp --> User : error(more animals)
+        else there is one animal
+            AnimalService --> AnimalShelterApp : returns the found animal
+            AnimalShelterApp --> User : returns the found animal
+            end
+
+    else animal not found
+        AnimalService --> AnimalShelterApp : error(no animal)
+        AnimalShelterApp --> User : error(no animal)
+     end
+end
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+
+
+User -> AnimalShelterApp: provides method to return animals
+AnimalServiceApp-> AnimalService : returnAnimals
+AnimalService -> AnimalRepository : getAnimals()
+AnimalRepository --> AnimalService : List<Animal>
+
+
+alt animal shelter not empty
+        alt animal exists
+            AnimalService --> AnimalService: returnAnimals()
+            AnimalService --> AnimalShelterApp : returns animal
+
+        else animal does not exist
+            AnimalService --> AnimalShelterApp: error(Animal not found)r)
+            AnimalShelterApp --> User: error(Animal not found)
+            end
+
+else animal shelter empty
+    AnimalService --> AnimalShelterApp : error(AnimalShelter empty)
+    AnimalShelterApp --> User: error(AnimalShelter empty)
+end
+
+
+@enduml
